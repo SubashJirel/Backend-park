@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // Routes
-// app.use("/api/users", require("./routes/userRoutes"));
+app.get('/', (req,res)=> {
+    res.send('Hello world')
+})
+app.use("/api/users", require("./routes/userRoutes"));
 // app.use("/api/vehicles", require("./routes/vehicleRoutes"));
 
 // MongoDB Connection
